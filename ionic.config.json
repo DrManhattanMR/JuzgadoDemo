@@ -1,0 +1,7 @@
+{
+  "name": "JuzgadoDemo",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

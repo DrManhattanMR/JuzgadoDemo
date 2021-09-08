@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "JuzgadoDemo",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

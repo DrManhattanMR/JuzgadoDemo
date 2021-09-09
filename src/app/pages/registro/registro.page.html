@@ -1,0 +1,268 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Registro</ion-title>
+
+    <!-- Hamburger -->
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Content -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Registro para el juzgado cívico</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+
+      <ion-row>
+        <ion-col size="6">
+          <ion-label position="stacked">Folio Caso</ion-label>
+          <ion-input [(ngModel)]="Folio"></ion-input>
+        </ion-col>
+        <ion-col size="6">
+          <ion-label position="stacked">Folio IPH</ion-label>
+          <ion-input></ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="6">
+          <ion-label position="stacked">Fecha Arresto</ion-label>
+          <ion-datetime displayFormat="DD MM YYYY"></ion-datetime>
+        </ion-col>
+        <ion-col size="6">
+          <ion-label position="stacked">Hora Arresto</ion-label>
+          <ion-datetime displayFormat="h:mm a"></ion-datetime>
+        </ion-col>
+      </ion-row>
+      <ion-item-divider>
+        <ion-label>
+          <ion-card-subtitle>Salida de Barandilla</ion-card-subtitle>
+        </ion-label>
+      </ion-item-divider>
+
+      <ion-row>
+        <ion-col size="6">
+          <ion-label position="stacked">Fecha Salida</ion-label>
+          <ion-datetime displayFormat="DD MM YYYY"></ion-datetime>
+        </ion-col>
+        <ion-col size="6">
+          <ion-label position="stacked">Hora Salida</ion-label>
+          <ion-datetime displayFormat="h:mm a"></ion-datetime>
+        </ion-col>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Sobre el Infractor</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+
+      <ion-row>
+        <ion-col size="12">
+          <ion-label position="stacked">Nombre Completo</ion-label>
+          <ion-input></ion-input>
+        </ion-col>
+        <ion-col size="12">
+          <ion-label position="stacked">Domicilio</ion-label>
+          <ion-input></ion-input>
+        </ion-col>
+        <ion-col size="6">
+          <ion-label position="stacked">Identificación Oficial</ion-label>
+          <ion-select okText="Okay" cancelText="Cancelar">
+            <ion-select-option value="brown">Credencial</ion-select-option>
+            <ion-select-option value="blonde">Pasaporte</ion-select-option>
+            <ion-select-option value="black">Cédula</ion-select-option>
+          </ion-select>
+        </ion-col>
+        <ion-col size="6">
+          <ion-label position="stacked">Número</ion-label>
+          <ion-input></ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="2">
+          <ion-label position="stacked">Edad</ion-label>
+          <ion-input type="number"></ion-input>
+        </ion-col>
+        <ion-col size="5">
+          <ion-label position="stacked">Sexo</ion-label>
+          <ion-select okText="Okay" cancelText="Cancelar">
+            <ion-select-option value="brown">Hombre</ion-select-option>
+            <ion-select-option value="blonde">Mujer</ion-select-option>
+          </ion-select>
+        </ion-col>
+        <ion-col size="5">
+          <ion-label position="stacked">Edo Civil</ion-label>
+          <ion-select okText="Okay" cancelText="Cancelar">
+            <ion-select-option value="brown">Soltero</ion-select-option>
+            <ion-select-option value="blonde">Casado</ion-select-option>
+            <ion-select-option value="blonde">Viudo</ion-select-option>
+            <ion-select-option value="blonde">Divorciado</ion-select-option>
+          </ion-select>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="6">
+          <ion-label position="stacked">Escolaridad</ion-label>
+          <ion-select okText="Okay" cancelText="Cancelar">
+            <ion-select-option value="brown">Primaria</ion-select-option>
+            <ion-select-option value="blonde">Secundaria</ion-select-option>
+            <ion-select-option value="blonde">Media Superior</ion-select-option>
+            <ion-select-option value="blonde">Licenciatura</ion-select-option>
+            <ion-select-option value="blonde">Posgrado</ion-select-option>
+            <ion-select-option value="blonde">Ninguno</ion-select-option>
+          </ion-select>
+        </ion-col>
+        <ion-col size="6">
+          <ion-label position="stacked">Ocupación</ion-label>
+          <ion-input></ion-input>
+        </ion-col>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Sobre el proceso en el juzgado cívico</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+
+      <ion-item-divider>
+        <ion-label>
+          <ion-card-subtitle>Entrada al Juzgado Civico</ion-card-subtitle>
+        </ion-label>
+      </ion-item-divider>
+
+      <ion-row>
+        <ion-col size="6">
+          <ion-label position="stacked">Fecha</ion-label>
+          <ion-datetime displayFormat="DD MM YYYY"></ion-datetime>
+        </ion-col>
+        <ion-col size="6">
+          <ion-label position="stacked">Hora</ion-label>
+          <ion-datetime displayFormat="h:mm a"></ion-datetime>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="12">
+          <ion-label position="stacked">Motivo Arresto</ion-label>
+          <ion-textarea></ion-textarea>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="6">
+          <ion-label position="stacked">Dictamen Médico</ion-label>
+          <ion-button (click)="VerMedico()" size="small">Consultar</ion-button>
+        </ion-col>
+        <ion-col size="6">
+          <ion-label position="stacked">Dictamen PsicoSocial</ion-label>
+          <ion-button (click)="VerSocial()" size="small">Consultar</ion-button>
+
+        </ion-col>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Sobre la audiencia en el juzgado cívico</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+
+      <ion-row>
+        <ion-col size="12">
+          <ion-label position="stacked">Juez Cívico a Cargo</ion-label>
+          <ion-input></ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="12">
+          <ion-label position="stacked">Testigos</ion-label><br>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+
+        <ion-col *ngFor="let item of Testigos" size="4">
+          <ion-chip>
+            <ion-avatar>
+              <img
+                src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBmaWxsPSIjYzVkYmZmIiBkPSJNMCAwaDUxMnY1MTJIMHoiLz48cGF0aCBkPSJNMjU2IDMwNGM2MS42IDAgMTEyLTUwLjQgMTEyLTExMlMzMTcuNiA4MCAyNTYgODBzLTExMiA1MC40LTExMiAxMTIgNTAuNCAxMTIgMTEyIDExMnptMCA0MGMtNzQuMiAwLTIyNCAzNy44LTIyNCAxMTJ2NTZoNDQ4di01NmMwLTc0LjItMTQ5LjgtMTEyLTIyNC0xMTJ6IiBmaWxsPSIjODJhZWZmIi8+PC9zdmc+" />
+            </ion-avatar>
+            <ion-label (click)="verTestigo(item)">{{item.Nombre}}</ion-label>
+          </ion-chip>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="6">
+          <ion-label position="stacked">Hora Inicio Auciencia</ion-label>
+          <ion-datetime displayFormat="h:mm a"></ion-datetime>
+        </ion-col>
+        <ion-col size="6">
+          <ion-label position="stacked">Hora Fin Audiencia</ion-label>
+          <ion-datetime displayFormat="h:mm a"></ion-datetime>
+        </ion-col>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Registro de las sanciones</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-row>
+        <ion-col size="12">
+          <ion-label position="stacked">Folio</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="6">
+          <ion-label position="stacked">Folio Boleta de Pago</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-col>
+        <ion-col size="6">
+          <ion-label position="stacked">Monto Multa</ion-label>
+          <ion-input type="number"></ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="6">
+          <ion-label position="stacked"># Horas Arresto</ion-label>
+          <ion-input type="number"></ion-input>
+        </ion-col>
+        <ion-col size="6">
+          <ion-label position="stacked"># Horas Sesiones</ion-label>
+          <ion-input type="number"></ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="12">
+          <ion-label position="stacked">Institución a la que se canaliza el Infractor</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="12">
+          <ion-label position="stacked">Responsable o Contacto de la Institución</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="12">
+          <ion-label position="stacked">Actividad a favor de la comunidad</ion-label>
+          <ion-select okText="Ok" cancelText="Cancelar">
+            <ion-select-option value="Actividad">Actividad 1</ion-select-option>
+            <ion-select-option value="Actividad">Actividad 2</ion-select-option>
+            <ion-select-option value="Actividad">Actividad 3</ion-select-option>
+            <ion-select-option value="Actividad">Actividad 4</ion-select-option>
+            <ion-select-option value="Actividad">Actividad 5</ion-select-option>
+          </ion-select>
+        </ion-col>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

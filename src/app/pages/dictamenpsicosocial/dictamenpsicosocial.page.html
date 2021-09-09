@@ -1,0 +1,110 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Dictamen PsicoSocial</ion-title>
+    <!-- Hamburger -->
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Ingresa un Folio</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <div class="ion-text-center">
+        <ion-item>
+          <ion-input [(ngModel)]="Folio"></ion-input>
+          <ion-button slot="end" *ngIf="Folio!=''" color="primary" (click)="verificarFolio()">
+            <ion-icon name="search-outline"></ion-icon> Consultar
+          </ion-button>
+          <!-- <ion-button clear slot="end">Forgot</ion-button> -->
+        </ion-item>
+      </div>
+    </ion-card-content>
+  </ion-card>
+  <ion-card *ngIf="Nuevo">
+    <ion-card-content>
+      <ion-card-header>
+        <ion-card-subtitle>Agregar Dictamen</ion-card-subtitle>
+      </ion-card-header>
+      <ion-row size="12">
+        <ion-col>
+          <ion-label position="stacked">Nombre Sujeto</ion-label>
+          <ion-input [(ngModel)]="NuevoDictamen.Sujeto"></ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="6">
+          <ion-label position="stacked">Fecha Dictamen</ion-label>
+          <ion-datetime [(ngModel)]="NuevoDictamen.Fecha" displayFormat="DD MM YYYY"></ion-datetime>
+        </ion-col>
+        <ion-col size="6">
+          <ion-label position="stacked">Hora Dictamen</ion-label>
+          <ion-datetime [(ngModel)]="NuevoDictamen.Hora" displayFormat="h:mm a"></ion-datetime>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="12">
+          <ion-label position="stacked">Médico a Cargo</ion-label>
+          <ion-input [(ngModel)]="NuevoDictamen.Medico"></ion-input>
+        </ion-col>
+        <ion-col size="12">
+          <ion-label position="stacked">Resolución Dictamen</ion-label>
+          <ion-textarea [(ngModel)]="NuevoDictamen.Dictamen"></ion-textarea>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-button (click)="Guardar()" shape="round" expand="block">Guardar</ion-button>
+
+        </ion-col>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+  <ion-card *ngIf="Existe&&DictamenPsicoSocial">
+    <ion-card-content>
+      <ion-card-header>
+        <ion-card-subtitle>Dictamen Existente</ion-card-subtitle>
+      </ion-card-header>
+      <ion-row>
+        <ion-col size="12">
+          <ion-label position="stacked">Sujeto en Cuestión</ion-label><br>
+          <ion-chip color="secondary" [disabled]="true">
+            <ion-label color="primary">{{DictamenPsicoSocial.Sujeto}}</ion-label>
+          </ion-chip>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="6">
+          <ion-label position="stacked">Fecha Dictamen</ion-label><br>
+          <ion-chip color="secondary" [disabled]="true">
+            <ion-label color="primary">{{DictamenPsicoSocial.Fecha| date: 'dd/MM/yyyy'}}</ion-label>
+          </ion-chip>
+        </ion-col>
+        <ion-col size="6">
+          <ion-label position="stacked">Hora Dictamen</ion-label>
+          <ion-chip color="secondary" [disabled]="true">
+            <ion-label color="primary">{{DictamenPsicoSocial.Hora| date: 'hh:mm a'}}</ion-label>
+          </ion-chip>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="12">
+          <ion-label position="stacked">Médico a Cargo</ion-label><br>
+          <ion-chip color="secondary" [disabled]="true">
+            <ion-label color="primary">{{DictamenPsicoSocial.Medico}}</ion-label>
+          </ion-chip>
+        </ion-col>
+        <ion-col size="12">
+          <ion-label position="stacked">Resolución Dictamen</ion-label><br>
+          <ion-chip color="secondary" [disabled]="true">
+            <ion-label color="primary">{{DictamenPsicoSocial.Dictamen}}</ion-label>
+          </ion-chip>
+        </ion-col>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

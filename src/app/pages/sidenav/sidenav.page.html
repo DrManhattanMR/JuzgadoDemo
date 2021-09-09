@@ -1,0 +1,48 @@
+<ion-app>
+  <ion-menu contentId="main-content" side="start">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Menú</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content>
+      <br>
+      <ion-card color="light">
+        <div class="img-wrapper">
+          <img src="../../../assets/profile.png" />
+          <ion-button color="light">
+            <ion-icon slot="icon-only" name="camera-outline" color="medium">
+            </ion-icon>
+          </ion-button>
+        </div>
+        <ion-card-content class="ion-text-center">
+          <h2>Rick & Morty</h2>
+          <ion-text color="medium">
+            <div style="display: flex;" class="ion-justify-content-center">
+              <ion-icon name="location-outline" color="medium">
+              </ion-icon>
+              <p>Oficina 2345, Los Mochis, SIN.</p>
+            </div>
+          </ion-text>
+        </ion-card-content>
+      </ion-card>
+      <ion-list>
+        <ion-menu-toggle auto-hide="false" *ngFor="let nav of NAV">
+          <ion-item routerDirection="root" [routerLink]="nav.link" [class.active-menu]="active === nav.link">
+            {{nav.name}}
+            <ion-icon slot="start" [ios]="nav.icon + '-outline'" [md]="nav.icon + '-sharp'"></ion-icon>
+          </ion-item>
+        </ion-menu-toggle>
+      </ion-list>
+    </ion-content>
+    <ion-footer>
+      <ion-toolbar>
+        <ion-button expand="block" fill="outline">Cerrar Sesión</ion-button>
+      </ion-toolbar>
+    </ion-footer>
+  </ion-menu>
+
+  <ion-router-outlet id="main-content" main></ion-router-outlet>
+
+</ion-app>
